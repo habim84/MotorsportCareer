@@ -54,7 +54,18 @@ namespace MotorsportCareer
             {
                 if (templatePopup.templateMode == CreateCareerPopup.CreateCareerTemplateMode.CloneExisting)
                 {
+                    Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
 
+                    dlg.DefaultExt = ".json";
+                    dlg.Filter = "Career Save (.json)|*.json";
+
+                    Nullable<bool> result = dlg.ShowDialog();
+                    if (result == true)
+                    {
+                        // Get selected file
+                        //dlf.File Name
+
+                    }
                 }
                 else if (templatePopup.templateMode == CreateCareerPopup.CreateCareerTemplateMode.CreateNew)
                 {
